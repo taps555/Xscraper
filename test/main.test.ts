@@ -1,4 +1,4 @@
-import { PlaywrightCrawler, purgeDefaultStorages } from '@crawlee/playwright';
+import { CheerioCrawler, purgeDefaultStorages } from '@crawlee/cheerio';
 import { beforeAll, describe, expect, it } from 'vitest';
 
 import { router } from '../src/routes.js';
@@ -9,7 +9,7 @@ describe('PlaywrightCrawler', () => {
     });
 
     it('should crawl and push data to dataset', async () => {
-        const crawler = new PlaywrightCrawler({
+        const crawler = new CheerioCrawler({
             maxRequestsPerCrawl: 10,
             requestHandler: router,
         });
