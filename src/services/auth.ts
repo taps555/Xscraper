@@ -8,13 +8,6 @@ interface StoredSession {
 }
 const STORE_NAME = 'cookie-session';
 const KEY = 'x-main';
-
-/**
- * Nama env var untuk cookie header.
- * Diisi di Apify Console > Actor > Settings > Environment variables.
- * Ini cara paling aman: tidak ikut ter-commit, tidak ikut ke Docker image,
- * dan tidak perlu diketik ulang di form input setiap run.
- */
 const ENV_COOKIE_HEADER = 'X_COOKIE_HEADER';
 
 export function normalizeCookies(rawCookies: any[]): Cookie[] {
@@ -53,7 +46,6 @@ export const AuthService = {
     },
     async getCookies(): Promise<StoredSession | null> {
         try {
-            // const cookieHeader = await
             const store = await KeyValueStore.open(STORE_NAME);
             const cookie = await store.getValue<any[]>(KEY);
 
@@ -116,8 +108,6 @@ export async function resolveCookieHeader(): Promise<{
 
 export const parseCookieHeaderString = async (rawCookieString: string): Promise<ParsedCookieSession> => {
     const cookieHeader = rawCookieString.trim();
-
-    // Deteksi kesalahan paling umum: nilai terenkripsi / bukan cookie sama sekali.
     if (cookieHeader.startsWith('ENCRYPTED_VALUE:')) {
         throw new Error(
             'Nilai cookieHeader berisi "ENCRYPTED_VALUE:..." — itu BUKAN cookie X, melainkan data terenkripsi ' +
@@ -170,17 +160,9 @@ export const parseCookieHeaderString = async (rawCookieString: string): Promise<
     if (!ct0) {
         throw new Error('Token ct0 tidak ditemukan di dalam cookie string header.');
     }
-
-    // auth_token adalah SATU-SATUNYA cookie yang menentukan "sudah login atau belum".
-    // Tanpa ini, X tetap membalas 200 tapi menampilkan halaman publik tanpa request
-    // SearchTimeline -> queryId tidak akan pernah tertangkap.
     if (!names.includes('auth_token')) {
         throw new Error(
-            `Cookie "auth_token" TIDAK ADA di dalam cookieHeader (hanya ada ${names.length} cookie: ${names.join(', ')}).\n` +
-                'auth_token adalah cookie penentu login. Tanpa itu, X menganggap kamu pengunjung anonim\n' +
-                'dan tidak pernah mengirim request SearchTimeline, sehingga QueryId tidak bisa ditangkap.\n' +
-                'Cara mengambil: buka x.com di browser -> login -> DevTools > Application > Cookies > https://x.com\n' +
-                '-> copy SEMUA cookie (terutama auth_token dan ct0) dalam format "nama=nilai; nama=nilai".',
+            `Cookie "auth_token" TIDAK ADA di dalam cookieHeader (hanya ada ${names.length} cookie: ${names.join(', ')}).\n`,
         );
     }
 

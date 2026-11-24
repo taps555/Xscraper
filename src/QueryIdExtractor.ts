@@ -25,12 +25,6 @@ function safeParseJson(value: string | null | undefined): any {
     }
 }
 
-/**
- * X mengirim GraphQL dalam 2 bentuk:
- *  - GET  : variables ada di query string (?variables={"..."})
- *  - POST : variables ada di body JSON ({"variables":{...},"features":{...},"queryId":"..."})
- * Cursor harus disuntik ke tempat yang benar, kalau tidak request berikutnya invalid (404).
- */
 function withCursor(base: SearchRequest, cursor: string | null): SearchRequest {
     if (!cursor) return base;
 

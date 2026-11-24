@@ -6,7 +6,6 @@
     "version": "1.0",
     "dockerfile": "../Dockerfile",
     "meta": {
-        "generatedBy": "Cline with Claude Sonnet 4.5",
         "maintainer": "Trio Adhi Pamungkas S",
         "keywords": ["twitter", "x", "social-media", "scraping", "sentiment-analysis"]
     },

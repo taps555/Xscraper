@@ -43,12 +43,6 @@ const crawler = new PlaywrightCrawler({
         await page.context().addCookies(session.playwrightCookies);
 
         const QUERY_ID_REGEX = /\/graphql\/([a-zA-Z0-9_-]+)\/Search[A-Za-z]*(?:\?|$)/;
-
-        // ================= PANEN RESPONS BROWSER =================
-        // Strategi: JANGAN replay request GraphQL.
-        // Run sebelumnya membuktikan browser dapat 200 (193 KB) sementara replay
-        // ditolak 404 body kosong dalam 81 ms. Jadi kita pakai respons browser
-        // langsung — tidak ada header transaksional yang perlu dipalsukan.
         const diagnostics = new Diagnostics(log);
         const collectedTweets = new Map<string, any>();
         const browserRequestsAt = new Map<any, number>();
