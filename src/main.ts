@@ -3,44 +3,19 @@ import { Actor } from 'apify';
 
 import { PlaywrightCrawler } from 'crawlee';
 import { Input } from './interfaces/Input.js';
-import { fetchSearch } from './QueryIdExtractor.js';
 import { collectTweetsFromSearchTimelineResponse } from './services/TweetParses.js';
-import { parseCookieHeaderString, AuthService } from './services/auth.js';
+import { resolveCookieHeader } from './services/auth.js';
 import { Diagnostics, buildRecord } from './services/diagnostics.js';
 import fs from 'fs';
 
-interface CapturedRequest {
-    id: string;
-    operation: string;
-    url: string;
-    method: string;
-    headers: Record<string, string>;
-    body: string | null;
-}
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 await Actor.init();
 const input: any = (await Actor.getInput<Input>()) ?? ({} as any);
 const MAX_ITEMS: number = input.maxItems ?? 10;
 
-const session = input.cookieHeader?.trim()
-    ? await (async () => {
-          const s = await parseCookieHeaderString(input.cookieHeader);
-          await AuthService.saveCookies(s.playwrightCookies);
-          return s;
-      })()
-    : await (async () => {
-          const authServiceCookies = await AuthService.getCookies();
-          if (!authServiceCookies) {
-              throw new Error(
-                  'Cookie tidak ditemukan: isi "cookieHeader" di input, atau sediakan file cookie di key-value store.',
-              );
-          }
-          return {
-              cookieHeader: authServiceCookies.cookies.map((c) => `${c.name}=${c.value}`).join('; '),
-              ct0: authServiceCookies.cookies.find((c) => c.name === 'ct0')?.value ?? '',
-              playwrightCookies: authServiceCookies.cookies,
-          };
-      })();
+const session = await resolveCookieHeader();
+console.log(`Cookie source=${session.source}, jumlah=${session.playwrightCookies.length}`);
 
 if (!input.searchTerm) {
     await Actor.exit('Input searchTerm wajib diisi', { exitCode: 1 });
@@ -69,46 +44,15 @@ const crawler = new PlaywrightCrawler({
 
         const QUERY_ID_REGEX = /\/graphql\/([a-zA-Z0-9_-]+)\/Search[A-Za-z]*(?:\?|$)/;
 
-        // X bisa mengirim lebih dari satu operasi Search* (SearchByRawQuery, SearchTimeline, ...).
-        // Yang kita mau: SearchByRawQuery (paling lengkap + biasanya GET).
-        // Tapi kalau tidak muncul, pakai kandidat pertama yang tertangkap.
-        const candidates: CapturedRequest[] = [];
-        let resolveCaptured: (value: CapturedRequest | null) => void = () => {};
-        const queryIdPromise = new Promise<CapturedRequest | null>((resolve) => {
-            resolveCaptured = resolve;
-        });
-
-        page.on('request', (req) => {
-            const url = req.url();
-            const result = extractQueryId(url, QUERY_ID_REGEX);
-            if (!result) return;
-
-            const captured: CapturedRequest = {
-                ...result,
-                url,
-                method: req.method(),
-                headers: req.headers() as Record<string, string>,
-                // body WAJIB ikut disimpan: SearchTimeline dikirim sebagai POST
-                body: req.postData() ?? null,
-            };
-
-            candidates.push(captured);
-            log.info(
-                `QueryId ditangkap: operation=${captured.operation}, id=${captured.id}, method=${captured.method}`,
-            );
-
-            if (captured.operation === 'SearchByRawQuery') {
-                resolveCaptured(captured);
-            } else {
-                setTimeout(() => resolveCaptured(captured), 3000);
-            }
-        });
-
-        // ================= DIAGNOSTIK =================
-        // Rekam respons yang dibuat BROWSER sendiri (bukan replay).
-        // Ini pembeda utama: kalau browser 200 tapi replay 404 -> bukan rate limit.
+        // ================= PANEN RESPONS BROWSER =================
+        // Strategi: JANGAN replay request GraphQL.
+        // Run sebelumnya membuktikan browser dapat 200 (193 KB) sementara replay
+        // ditolak 404 body kosong dalam 81 ms. Jadi kita pakai respons browser
+        // langsung — tidak ada header transaksional yang perlu dipalsukan.
         const diagnostics = new Diagnostics(log);
+        const collectedTweets = new Map<string, any>();
         const browserRequestsAt = new Map<any, number>();
+        const harvested = new Set<string>();
 
         page.on('request', (req) => {
             browserRequestsAt.set(req, Date.now());
@@ -144,136 +88,78 @@ const crawler = new PlaywrightCrawler({
                     error: readError,
                 }),
             );
+
+            if (res.status() !== 200 || !bodyText) return;
+
+            // Respons yang sama bisa terpicu dua kali (mis. saat React re-render).
+            const key = `${url}#${bodyText.length}`;
+            if (harvested.has(key)) return;
+            harvested.add(key);
+
+            let parsed: any;
+            try {
+                parsed = JSON.parse(bodyText);
+            } catch {
+                return;
+            }
+
+            const before = collectedTweets.size;
+            collectTweetsFromSearchTimelineResponse([parsed], MAX_ITEMS, collectedTweets);
+            const added = collectedTweets.size - before;
+            if (added > 0) {
+                log.info(`Panen ${added} tweet dari respons browser (total ${collectedTweets.size}/${MAX_ITEMS})`);
+            }
         });
-        // ==============================================
+        // =========================================================
 
         log.info(`Navigating: ${request.url}`);
         await page.goto(request.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
 
-        const scrollInterval = setInterval(async () => {
-            await page.evaluate(() => window.scrollBy(0, 1500)).catch(() => {});
-        }, 2000);
+        // Scroll sampai target terpenuhi. Setiap scroll memicu X mengirim
+        // SearchTimeline berikutnya, dan listener di atas memanennya.
+        const deadline = Date.now() + 60_000;
+        let stagnantRounds = 0;
+        let lastSize = 0;
 
-        const captured = await Promise.race([
-            queryIdPromise,
-            new Promise<null>((resolve) => setTimeout(() => resolve(null), 20000)),
-        ]).catch(() => null);
+        while (collectedTweets.size < MAX_ITEMS && Date.now() < deadline) {
+            await sleep(1200);
+            await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)).catch(() => {});
 
-        clearInterval(scrollInterval);
-
-        // Fallback: kalau SearchByRawQuery tidak muncul, pakai kandidat TERBARU.
-        // Versi sebelumnya memakai candidates[0] (yang tertua) -> header transaksional basi.
-        const capturedQueryId = captured ?? candidates[candidates.length - 1] ?? null;
-        if (!captured && capturedQueryId) {
-            log.warning(
-                `SearchByRawQuery tidak muncul, fallback ke kandidat terbaru: ` +
-                    `${capturedQueryId.operation} (${capturedQueryId.method})`,
-            );
+            if (collectedTweets.size === lastSize) {
+                stagnantRounds++;
+                // 4 putaran tanpa tambahan -> kemungkinan sudah habis / kena batas.
+                if (stagnantRounds >= 4) {
+                    log.warning(`Tidak ada tweet baru setelah ${stagnantRounds} putaran scroll, berhenti.`);
+                    break;
+                }
+            } else {
+                stagnantRounds = 0;
+                lastSize = collectedTweets.size;
+            }
         }
 
-        if (!capturedQueryId) {
-            log.error('Gagal menangkap QueryId, menutup crawler.');
+        log.info(`Selesai memanen: ${collectedTweets.size} tweet terkumpul.`);
+        diagnostics.setHarvestedCount(collectedTweets.size);
+
+        const allTweetsInCrawl = Array.from(collectedTweets.values()).slice(0, MAX_ITEMS);
+
+        if (allTweetsInCrawl.length > 0) {
+            await Actor.pushData(allTweetsInCrawl);
+            fs.writeFileSync('hasilscraping2.json', JSON.stringify(allTweetsInCrawl, null, 2));
+            log.info(`Saved ${allTweetsInCrawl.length} tweets.`);
+            await diagnostics.save();
+        } else {
+            // Jangan diam-diam "sukses": 0 tweet harus terlihat gagal.
             log.info(`URL sekarang: ${page.url()}`);
             log.info(`Judul halaman: ${await page.title()}`);
-
             const accountBtn = await page.locator('[data-testid="SideNav_AccountSwitcher_Button"]').count();
             log.info(`Terdeteksi sudah login: ${accountBtn > 0}`);
 
             await Actor.setValue('debug_page.png', await page.screenshot({ fullPage: true }), {
                 contentType: 'image/png',
             });
-            await diagnostics.save();
-            return;
-        }
-
-        log.info(`QueryId captured: ${capturedQueryId.operation} (${capturedQueryId.id}). Fetching data...`);
-
-        const collectedTweets = new Map<string, any>();
-
-        try {
-            const tweets = await fetchSearch({
-                limit: MAX_ITEMS,
-                request: {
-                    url: capturedQueryId.url,
-                    method: capturedQueryId.method,
-                    headers: capturedQueryId.headers,
-                    body: capturedQueryId.body,
-                },
-                fetchFn: async (req) => {
-                    // Header yang tidak boleh/ tidak perlu dikirim manual lewat APIRequestContext
-                    const skip = new Set([
-                        'cookie',
-                        'content-length',
-                        'host',
-                        'connection',
-                        'accept-encoding',
-                        'origin',
-                    ]);
-                    const cleanHeaders: Record<string, string> = {};
-                    for (const [k, v] of Object.entries(req.headers ?? {})) {
-                        if (!skip.has(k.toLowerCase())) cleanHeaders[k] = v;
-                    }
-
-                    // Jangan timpa dengan string kosong: kalau ct0 tidak ada, header
-                    // yang sudah ada dari capture tetap dipakai.
-                    if (session.ct0) {
-                        cleanHeaders['x-csrf-token'] = session.ct0;
-                    }
-
-                    const startedAt = Date.now();
-                    const res = await page.context().request.fetch(req.url, {
-                        method: req.method,
-                        headers: cleanHeaders,
-                        data: req.body ?? undefined,
-                        failOnStatusCode: false,
-                        timeout: 60000,
-                    });
-
-                    const text = await res.text();
-
-                    diagnostics.add(
-                        buildRecord({
-                            source: 'replay',
-                            operation: extractQueryId(req.url, QUERY_ID_REGEX)?.operation ?? 'unknown',
-                            method: req.method,
-                            status: res.status(),
-                            durationMs: Date.now() - startedAt,
-                            headers: res.headers() as Record<string, string>,
-                            bodyText: text,
-                            requestHeaders: cleanHeaders,
-                        }),
-                    );
-
-                    let body: any = text;
-                    try {
-                        body = JSON.parse(text);
-                    } catch {
-                        // biarkan string kalau bukan JSON
-                    }
-                    return { status: res.status(), body };
-                },
-            });
-
-            collectTweetsFromSearchTimelineResponse(tweets, input.maxItems ?? 10, collectedTweets);
-
-            const allTweetsInCrawl = Array.from(collectedTweets.values()).slice(0, input.maxItems ?? 10);
-
-            if (allTweetsInCrawl.length > 0) {
-                await Actor.pushData(allTweetsInCrawl);
-                fs.writeFileSync('hasilscraping2.json', JSON.stringify(allTweetsInCrawl, null, 2));
-                console.log(`Saved ${allTweetsInCrawl.length} tweets.`);
-            } else {
-                // Jangan diam-diam "sukses": 0 tweet harus terlihat gagal.
-                const diagnosis = await diagnostics.save();
-                log.error(
-                    `Tidak ada tweet yang tersimpan. Verdict: ${diagnosis.verdict} (${diagnosis.title})`,
-                );
-                throw new Error(`Scraping gagal: 0 tweet (${diagnosis.verdict})`);
-            }
-        } catch (err) {
-            log.error('Error saat fetchSearch:');
-            await diagnostics.save();
-            await Actor.exit(`Gagal fetch data: ${err instanceof Error ? err.message : String(err)}`, { exitCode: 1 });
+            const diagnosis = await diagnostics.save();
+            await Actor.exit(`Scraping gagal: 0 tweet (${diagnosis.verdict})`, { exitCode: 1 });
         }
     },
 });

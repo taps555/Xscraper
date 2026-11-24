@@ -21,9 +21,10 @@
         "cookieHeader": {
             "title": "Cookie Header",
             "type": "string",
-            "description": "Cadangan: string header cookies dari Cookie Editor, dipakai kalau file cookie JSON tidak tersedia",
+            "description": "DEPRECATED — tidak dipakai lagi. Cookie dibaca dari environment variable X_COOKIE_HEADER atau dari key-value store (cookie-session/x-main).",
             "editor": "textarea",
-            "isSecret": true
+            "isSecret": true,
+            "sectionCaption": "Lanjutan (opsional)"
         },
         "proxy": {
             "title": "Proxy Configuration",

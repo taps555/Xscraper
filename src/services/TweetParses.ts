@@ -1,4 +1,4 @@
-import { TweetResponse } from '../interfaces/Output.js';
+import type { TweetResponse } from '../interfaces/Output.js';
 export function mapTweetResult(tweetResult: any): TweetResponse {
     const legacy = tweetResult.legacy ?? {};
     const details = tweetResult.details ?? {};

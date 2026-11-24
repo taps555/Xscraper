@@ -99,7 +99,17 @@ describe('Diagnostics.diagnose', () => {
         expect(verdictOf([rec('browser', 200), rec('replay', 200)])).toBe('OK');
     });
 
-    it('browser 200 tanpa replay -> BROWSER_OK_REPLAY_NOT_TRIED', () => {
-        expect(verdictOf([rec('browser', 200)])).toBe('BROWSER_OK_REPLAY_NOT_TRIED');
+    it('browser 200 dan tweet dipanen -> OK', () => {
+        const d = new Diagnostics(silent);
+        d.add(rec('browser', 200));
+        d.setHarvestedCount(10);
+        expect(d.diagnose().verdict).toBe('OK');
+    });
+
+    it('browser 200 tapi 0 tweet -> BROWSER_OK_NO_TWEETS', () => {
+        const d = new Diagnostics(silent);
+        d.add(rec('browser', 200));
+        d.setHarvestedCount(0);
+        expect(d.diagnose().verdict).toBe('BROWSER_OK_NO_TWEETS');
     });
 });

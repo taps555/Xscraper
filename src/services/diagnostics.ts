@@ -97,9 +97,15 @@ export function parseRateLimit(headers: Record<string, string>): RateLimitInfo {
 export class Diagnostics {
     private readonly records: NetworkRecord[] = [];
     private readonly log: LogLike;
+    private harvestedCount = 0;
 
     constructor(log: LogLike) {
         this.log = log;
+    }
+
+    /** Jumlah tweet yang berhasil dipanen dari respons browser. */
+    setHarvestedCount(count: number): void {
+        this.harvestedCount = count;
     }
 
     add(record: NetworkRecord): void {
@@ -149,9 +155,7 @@ export class Diagnostics {
         const replayOk = replay.filter((r) => r.status === 200);
         const exhausted = this.records.filter((r) => r.rateLimit.exhausted);
         const explicit429 = this.records.filter((r) => r.status === 429);
-        const emptyBodyFailures = this.records.filter(
-            (r) => r.status !== null && r.status !== 200 && r.emptyBody,
-        );
+        const emptyBodyFailures = this.records.filter((r) => r.status !== null && r.status !== 200 && r.emptyBody);
 
         const evidence: string[] = [];
         evidence.push(`request browser: ${browser.length} (sukses 200: ${browserOk.length})`);
@@ -170,8 +174,7 @@ export class Diagnostics {
             return {
                 verdict: 'RATE_LIMITED_EXPLICIT',
                 title: 'Kena rate limit (429 eksplisit)',
-                explanation:
-                    'X membalas 429 Too Many Requests. Ini rate limit yang jelas dan tidak ambigu.',
+                explanation: 'X membalas 429 Too Many Requests. Ini rate limit yang jelas dan tidak ambigu.',
                 evidence,
                 recommendations: [
                     `Tunggu sampai ${r.rateLimit.resetAtIso ?? 'window reset berikutnya'} sebelum run lagi.`,
@@ -275,7 +278,6 @@ export class Diagnostics {
         };
     }
 
-
     async save(): Promise<Diagnosis> {
         const diagnosis = this.diagnose();
 
@@ -337,4 +339,3 @@ export function buildRecord(params: {
         error: params.error,
     };
 }
-
