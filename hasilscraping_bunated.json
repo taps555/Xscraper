@@ -1,40 +1,40 @@
 [
   {
     "type": "tweet",
-    "id": "1898142104691568838",
-    "url": "https://x.com/rszxkitten/status/1898142104691568838",
-    "twitterUrl": "https://twitter.com/rszxkitten/status/1898142104691568838",
-    "text": "@mi0wchi cih untuk u ak kasih penguin bunny teddy bear https://t.co/5acBBZZFrK",
+    "id": "2124688474762535184",
+    "url": "https://x.com/azaleasafitri0/status/2124688474762535184",
+    "twitterUrl": "https://twitter.com/azaleasafitri0/status/2124688474762535184",
+    "text": "2 tahun sudah Bapak Prabowo Subianto memimpin Indonesia. Terima kasih atas pengabdian dan kerja kerasnya untuk negeri. 🇮🇩\nMenurut kamu, program apa yang paling terasa manfaatnya? Tulis di reply \n.\n#TerimaKasihPrabowo #2TahunPrabowo https://t.co/miuWDqmGUV",
     "source": "",
     "retweetCount": 0,
     "replyCount": 0,
     "likeCount": 0,
     "quoteCount": 0,
-    "viewCount": "73",
-    "createdAt": "2025-03-07T22:41:58.000Z",
+    "viewCount": "3",
+    "createdAt": "2026-11-23T02:16:21.000Z",
     "lang": "in",
     "bookmarkCount": 0,
     "isReply": false,
     "inReplyToId": null,
-    "conversationId": "1897957204374045019",
+    "conversationId": "2124688474762535184",
     "inReplyToUserId": null,
     "inReplyToUsername": null,
     "isPinned": false,
     "author": {
       "type": "user",
-      "userName": "rszxkitten",
-      "url": "https://x.com/rszxkitten",
-      "twitterUrl": "https://twitter.com/rszxkitten",
-      "id": "1814320893876948992",
-      "name": "🍁katarina yu🐦‍🔥",
+      "userName": "azaleasafitri0",
+      "url": "https://x.com/azaleasafitri0",
+      "twitterUrl": "https://twitter.com/azaleasafitri0",
+      "id": "2087820967678709760",
+      "name": "azalea safitri",
       "isVerified": false,
       "isBlueVerified": false,
-      "profilePicture": "https://pbs.twimg.com/profile_images/2088115141258997760/30Ej0ewn_normal.jpg",
+      "profilePicture": "https://pbs.twimg.com/profile_images/2087821499193573376/2LYfY_PJ_normal.jpg",
       "coverPicture": "",
-      "description": "#祁煜 loyal fishes.",
+      "description": "",
       "location": "",
-      "followers": 631,
-      "following": 534,
+      "followers": 0,
+      "following": 0,
       "status": "",
       "canDm": false,
       "canMediaTag": false,
@@ -50,13 +50,13 @@
       "hasCustomTimelines": true,
       "isTranslator": false,
       "mediaCount": 0,
-      "statusesCount": 26883,
+      "statusesCount": 152,
       "withheldInCountries": [],
       "affiliatesHighlightedLabel": {},
       "possiblySensitive": false,
       "pinnedTweetIds": [],
       "profile_bio": {
-        "description": "#祁煜 loyal fishes.",
+        "description": "",
         "entities": {
           "description": {
             "user_mentions": []
@@ -73,7 +73,7 @@
     "entities": {
       "media": [
         {
-          "expanded_url": "https://x.com/rszxkitten/status/1898142104691568838/photo/1"
+          "expanded_url": "https://x.com/azaleasafitri0/status/2124688474762535184/video/1"
         }
       ]
     },
@@ -81,28 +81,36 @@
     "isQuote": false,
     "media": [
       {
-        "expanded_url": "https://x.com/rszxkitten/status/1898142104691568838/photo/1",
+        "additional_media_info": {
+          "monetizable": false
+        },
+        "expanded_url": "https://x.com/azaleasafitri0/status/2124688474762535184/video/1",
         "ext_media_availability": {
           "status": "Available"
         },
         "ext_playlists": [],
-        "id_str": "1898142093073367040",
+        "id_str": "2124688453686247424",
         "indices": [
-          55,
-          78
+          232,
+          255
         ],
-        "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/GleOLUbawAAkWwp.jpg",
+        "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2124688453686247424/img/xt9EJ7RtPBisMpKR.jpg",
         "original_info": {
-          "height": 220,
-          "width": 220
+          "height": 564,
+          "width": 320
         },
-        "type": "animated_gif",
+        "type": "video",
         "video_info": {
+          "duration_millis": 60162,
           "variants": [
             {
-              "bitrate": 0,
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/amplify_video/2124688453686247424/pl/8HMGvcnp3o6JHPMp.m3u8?tag=14"
+            },
+            {
+              "bitrate": 632000,
               "content_type": "video/mp4",
-              "url": "https://video.twimg.com/tweet_video/GleOLUbawAAkWwp.mp4"
+              "url": "https://video.twimg.com/amplify_video/2124688453686247424/vid/avc1/320x564/HZnJdO35qnv_M0uZ.mp4?tag=14"
             }
           ]
         }
@@ -112,40 +120,40 @@
   },
   {
     "type": "tweet",
-    "id": "2020279441021337769",
-    "url": "https://x.com/supozohet/status/2020279441021337769",
-    "twitterUrl": "https://twitter.com/supozohet/status/2020279441021337769",
-    "text": "Klod &amp; Londra\nCarino &amp; Biondo\nTeddy Bear &amp; Bunny \nPapa &amp; Papa\nhttps://t.co/DtEfQuqw5H",
+    "id": "2122265464915255420",
+    "url": "https://x.com/indepenSumatera/status/2122265464915255420",
+    "twitterUrl": "https://twitter.com/indepenSumatera/status/2122265464915255420",
+    "text": "PERANG LSP VS DASCO!!!\n\nTANGAN KANAN JOKOWI VS TANGAN KANAN PRABOWO DALAM PEREBUTAN KEKUASAAN DAN ISU PRABOWO 2 TAHUN MENJABAT JADI PRESIDEN\n\nANALISIS SPEKULATIF DAN ESKLUSIF\n\nWak, kalau lu hanya baca berita Tempo 7 April 2025 yang bilang NAMA DASCO IKUT MENCUAT dalam kasus judol https://t.co/WJa4y9V9yK",
     "source": "",
-    "retweetCount": 2,
-    "replyCount": 1,
-    "likeCount": 28,
-    "quoteCount": 0,
-    "viewCount": "996",
-    "createdAt": "2026-02-07T23:32:08.000Z",
+    "retweetCount": 196,
+    "replyCount": 57,
+    "likeCount": 1001,
+    "quoteCount": 7,
+    "viewCount": "200269",
+    "createdAt": "2026-11-16T09:48:11.000Z",
     "lang": "in",
-    "bookmarkCount": 3,
+    "bookmarkCount": 358,
     "isReply": false,
     "inReplyToId": null,
-    "conversationId": "2020279441021337769",
+    "conversationId": "2122265464915255420",
     "inReplyToUserId": null,
     "inReplyToUsername": null,
     "isPinned": false,
     "author": {
       "type": "user",
-      "userName": "supozohet",
-      "url": "https://x.com/supozohet",
-      "twitterUrl": "https://twitter.com/supozohet",
-      "id": "1884291791915991041",
-      "name": "Tranquilo🐰",
+      "userName": "indepenSumatera",
+      "url": "https://x.com/indepenSumatera",
+      "twitterUrl": "https://twitter.com/indepenSumatera",
+      "id": "1745265761416056832",
+      "name": "Sumatera Adil & Federal",
       "isVerified": false,
-      "isBlueVerified": false,
-      "profilePicture": "https://pbs.twimg.com/profile_images/1886906635601207296/vK6Lof21_normal.jpg",
+      "isBlueVerified": true,
+      "profilePicture": "https://pbs.twimg.com/profile_images/1766296832429457408/8oinVpmb_normal.jpg",
       "coverPicture": "",
-      "description": "🐰",
-      "location": "",
-      "followers": 575,
-      "following": 132,
+      "description": "ada satu hal didunia ini yang sangat berharga yaitu menjalani hidupmu dengan kebenaran dan keadilan, dengan sikap yang penuh kebajikan",
+      "location": "Kota Medan, Sumatera Utara",
+      "followers": 77246,
+      "following": 21280,
       "status": "",
       "canDm": false,
       "canMediaTag": false,
@@ -161,13 +169,13 @@
       "hasCustomTimelines": true,
       "isTranslator": false,
       "mediaCount": 0,
-      "statusesCount": 6284,
+      "statusesCount": 70291,
       "withheldInCountries": [],
       "affiliatesHighlightedLabel": {},
       "possiblySensitive": false,
       "pinnedTweetIds": [],
       "profile_bio": {
-        "description": "🐰",
+        "description": "ada satu hal didunia ini yang sangat berharga yaitu menjalani hidupmu dengan kebenaran dan keadilan, dengan sikap yang penuh kebajikan",
         "entities": {
           "description": {
             "user_mentions": []
@@ -184,7 +192,190 @@
     "entities": {
       "media": [
         {
-          "expanded_url": "https://x.com/wooyoungarttt/status/2020271435110051877/video/1"
+          "expanded_url": "https://x.com/indepenSumatera/status/2122265464915255420/photo/1"
+        }
+      ]
+    },
+    "isRetweet": false,
+    "isQuote": false,
+    "media": [
+      {
+        "expanded_url": "https://x.com/indepenSumatera/status/2122265464915255420/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "ext_playlists": [],
+        "features": {},
+        "id_str": "2122265449002110976",
+        "indices": [
+          281,
+          304
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/HXPNLn7bEAA-Tvf.jpg",
+        "native_editor_info": {
+          "edited_with_native_editor": true
+        },
+        "original_info": {
+          "height": 2048,
+          "width": 2048
+        },
+        "type": "photo"
+      }
+    ],
+    "isConversationControlled": false
+  },
+  {
+    "type": "tweet",
+    "id": "2124016876087054781",
+    "url": "https://x.com/sera_terima/status/2124016876087054781",
+    "twitterUrl": "https://twitter.com/sera_terima/status/2124016876087054781",
+    "text": "PRABOWO BARU DUA TAHUN MENJABAT TAPI KERUSAKANNYA KAYAK UDAH BERKUASA 1000 TAHUN",
+    "source": "",
+    "retweetCount": 0,
+    "replyCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "viewCount": "3",
+    "createdAt": "2026-11-21T05:47:40.000Z",
+    "lang": "in",
+    "bookmarkCount": 0,
+    "isReply": false,
+    "inReplyToId": null,
+    "conversationId": "2124016876087054781",
+    "inReplyToUserId": null,
+    "inReplyToUsername": null,
+    "isPinned": false,
+    "author": {
+      "type": "user",
+      "userName": "sera_terima",
+      "url": "https://x.com/sera_terima",
+      "twitterUrl": "https://twitter.com/sera_terima",
+      "id": "2037206621773062147",
+      "name": "sera",
+      "isVerified": false,
+      "isBlueVerified": false,
+      "profilePicture": "https://pbs.twimg.com/profile_images/2037208644769714176/xu7cUBVe_normal.jpg",
+      "coverPicture": "",
+      "description": "akun serah tulisan, terima bacaan || suka apa aja",
+      "location": "",
+      "followers": 0,
+      "following": 22,
+      "status": "",
+      "canDm": false,
+      "canMediaTag": false,
+      "createdAt": "",
+      "entities": {
+        "description": {
+          "urls": []
+        },
+        "url": {}
+      },
+      "fastFollowersCount": 0,
+      "favouritesCount": 0,
+      "hasCustomTimelines": true,
+      "isTranslator": false,
+      "mediaCount": 0,
+      "statusesCount": 14368,
+      "withheldInCountries": [],
+      "affiliatesHighlightedLabel": {},
+      "possiblySensitive": false,
+      "pinnedTweetIds": [],
+      "profile_bio": {
+        "description": "akun serah tulisan, terima bacaan || suka apa aja",
+        "entities": {
+          "description": {
+            "user_mentions": []
+          },
+          "url": {
+            "urls": []
+          }
+        }
+      }
+    },
+    "extendedEntities": {},
+    "card": {},
+    "place": {},
+    "entities": {},
+    "isRetweet": false,
+    "isQuote": false,
+    "media": [],
+    "isConversationControlled": false
+  },
+  {
+    "type": "tweet",
+    "id": "2118839135624466756",
+    "url": "https://x.com/drReUtari08/status/2118839135624466756",
+    "twitterUrl": "https://twitter.com/drReUtari08/status/2118839135624466756",
+    "text": "Pokok nya Aku sayang Bapak @prabowo ❤️❤️👏👏 Allah bekerja Boss 2 Tahun ini slama bpk menjabat  pada nangiss kalian Kebongkarrr kan ?? Ngerti sekarang hmm 🤭🤭🤭.  #temanprabowosubianto🇨🇭 https://t.co/SiiMjTcQCS",
+    "source": "",
+    "retweetCount": 13,
+    "replyCount": 6,
+    "likeCount": 60,
+    "quoteCount": 0,
+    "viewCount": "634",
+    "createdAt": "2026-11-06T22:53:10.000Z",
+    "lang": "in",
+    "bookmarkCount": 0,
+    "isReply": false,
+    "inReplyToId": null,
+    "conversationId": "2118839135624466756",
+    "inReplyToUserId": null,
+    "inReplyToUsername": null,
+    "isPinned": false,
+    "author": {
+      "type": "user",
+      "userName": "drReUtari08",
+      "url": "https://x.com/drReUtari08",
+      "twitterUrl": "https://twitter.com/drReUtari08",
+      "id": "1695192728173187072",
+      "name": "Riry08",
+      "isVerified": false,
+      "isBlueVerified": false,
+      "profilePicture": "https://pbs.twimg.com/profile_images/1785464755446063104/ovfAJQPR_normal.jpg",
+      "coverPicture": "",
+      "description": "#temanprabowosubianto & KETUA GERINDRA DPLN  SWISS 🇨🇭, akun baru lagi yang Lahr 23 .08.23👈🏽 &Tetap Semangat untuk Kemenangan Bpk #prabowo thn 2024",
+      "location": "",
+      "followers": 774,
+      "following": 532,
+      "status": "",
+      "canDm": false,
+      "canMediaTag": false,
+      "createdAt": "",
+      "entities": {
+        "description": {
+          "urls": []
+        },
+        "url": {}
+      },
+      "fastFollowersCount": 0,
+      "favouritesCount": 0,
+      "hasCustomTimelines": true,
+      "isTranslator": false,
+      "mediaCount": 0,
+      "statusesCount": 8058,
+      "withheldInCountries": [],
+      "affiliatesHighlightedLabel": {},
+      "possiblySensitive": false,
+      "pinnedTweetIds": [],
+      "profile_bio": {
+        "description": "#temanprabowosubianto & KETUA GERINDRA DPLN  SWISS 🇨🇭, akun baru lagi yang Lahr 23 .08.23👈🏽 &Tetap Semangat untuk Kemenangan Bpk #prabowo thn 2024",
+        "entities": {
+          "description": {
+            "user_mentions": []
+          },
+          "url": {
+            "urls": []
+          }
+        }
+      }
+    },
+    "extendedEntities": {},
+    "card": {},
+    "place": {},
+    "entities": {
+      "media": [
+        {
+          "expanded_url": "https://x.com/drReUtari08/status/2118839135624466756/video/1"
         }
       ]
     },
@@ -198,68 +389,38 @@
         "allow_download_status": {
           "allow_download": true
         },
-        "expanded_url": "https://x.com/wooyoungarttt/status/2020271435110051877/video/1",
+        "expanded_url": "https://x.com/drReUtari08/status/2118839135624466756/video/1",
         "ext_media_availability": {
           "status": "Available"
         },
         "ext_playlists": [],
-        "id_str": "2020271366113513472",
+        "id_str": "2118839112320892928",
         "indices": [
-          78,
-          101
+          183,
+          206
         ],
-        "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2020271366113513472/img/uJs_krfE2Dq8Yy04.jpg",
+        "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2118839112320892928/img/YVwoC0et3KKBZs69.jpg",
         "original_info": {
-          "height": 720,
-          "width": 960
-        },
-        "source_status_id_str": "2020271435110051877",
-        "source_user_results": {
-          "id": "VXNlclJlc3VsdHM6MTgzNzk1ODI4NjE4MTY0MjI0MA==",
-          "result": {
-            "__typename": "User",
-            "avatar": {
-              "image_url": "https://pbs.twimg.com/profile_images/2109683730583281664/Gokeg1PY_normal.jpg"
-            },
-            "core": {
-              "name": "ori",
-              "screen_name": "wooyoungarttt"
-            },
-            "id": "VXNlcjoxODM3OTU4Mjg2MTgxNjQyMjQw",
-            "identity_profile_labels_highlighted_label": {},
-            "privacy": {
-              "protected": false
-            },
-            "profile_image_shape": "Circle",
-            "rest_id": "1837958286181642240",
-            "super_followed_by": false,
-            "verification": {
-              "is_blue_verified": false
-            }
-          }
+          "height": 576,
+          "width": 576
         },
         "type": "video",
         "video_info": {
-          "duration_millis": 25900,
+          "duration_millis": 31366,
           "variants": [
             {
               "content_type": "application/x-mpegURL",
-              "url": "https://video.twimg.com/amplify_video/2020271366113513472/pl/cEqfUH8H7fdQ90DG.m3u8?tag=21"
+              "url": "https://video.twimg.com/amplify_video/2118839112320892928/pl/CE_UO3lobf0vhiNE.m3u8?tag=29"
             },
             {
-              "bitrate": 256000,
+              "bitrate": 432000,
               "content_type": "video/mp4",
-              "url": "https://video.twimg.com/amplify_video/2020271366113513472/vid/avc1/360x270/ks6r3Deu7NZav19q.mp4?tag=21"
+              "url": "https://video.twimg.com/amplify_video/2118839112320892928/vid/avc1/320x320/gD473pJlnZuOHsiJ.mp4?tag=29"
             },
             {
               "bitrate": 832000,
               "content_type": "video/mp4",
-              "url": "https://video.twimg.com/amplify_video/2020271366113513472/vid/avc1/480x360/ma7f_sebfmcVMwSt.mp4?tag=21"
-            },
-            {
-              "bitrate": 2176000,
-              "content_type": "video/mp4",
-              "url": "https://video.twimg.com/amplify_video/2020271366113513472/vid/avc1/960x720/ckiyU4OWgFh3I7cJ.mp4?tag=21"
+              "url": "https://video.twimg.com/amplify_video/2118839112320892928/vid/avc1/576x576/4dOhcFwHdBYr7QAW.mp4?tag=29"
             }
           ]
         }
@@ -269,40 +430,40 @@
   },
   {
     "type": "tweet",
-    "id": "1447902566516363275",
-    "url": "https://x.com/TXT_INA/status/1447902566516363275",
-    "twitterUrl": "https://twitter.com/TXT_INA/status/1447902566516363275",
-    "text": "🐧: aku penasaran apa ini bakal cocok sama kamu...\n🐧: di sini ada apa ya?\n🐧: oh! bukankah bunny ini imut?\n🐧: aku rasa ini cocok banget sama kamu\n🐧: tapi aku pikir ada sesuatu yang lebih bagus\n🐧: oh, teddy bear!\n🐧: gimana menurutmu? imut kan?\n https://t.co/vkf76y61x9",
+    "id": "2089054901427151341",
+    "url": "https://x.com/ubegebe1/status/2089054901427151341",
+    "twitterUrl": "https://twitter.com/ubegebe1/status/2089054901427151341",
+    "text": "Menurut saya Pak Prabowo kecil kemungkinan terpilih lagi di 2029.\n1. Approval rating dalam trend turun, setelah dua tahun menjabat jadi sekitar 50%. Susah untuk naikin. Apalagi situsi ekonomi kaya gini.\n2. Umur beliau di 2029, 78 tahun. Mungkin akan jadi pertimbangan pemilih",
     "source": "",
-    "retweetCount": 10,
-    "replyCount": 1,
-    "likeCount": 43,
-    "quoteCount": 0,
-    "viewCount": null,
-    "createdAt": "2021-10-12T12:30:47.000Z",
+    "retweetCount": 97,
+    "replyCount": 71,
+    "likeCount": 1291,
+    "quoteCount": 62,
+    "viewCount": "92120",
+    "createdAt": "2026-08-16T18:21:15.000Z",
     "lang": "in",
-    "bookmarkCount": 0,
+    "bookmarkCount": 44,
     "isReply": false,
     "inReplyToId": null,
-    "conversationId": "1447902566516363275",
+    "conversationId": "2089054901427151341",
     "inReplyToUserId": null,
     "inReplyToUsername": null,
     "isPinned": false,
     "author": {
       "type": "user",
-      "userName": "TXT_INA",
-      "url": "https://x.com/TXT_INA",
-      "twitterUrl": "https://twitter.com/TXT_INA",
-      "id": "1081935332465987584",
-      "name": "TXT MOA INDONESIA",
+      "userName": "ubegebe1",
+      "url": "https://x.com/ubegebe1",
+      "twitterUrl": "https://twitter.com/ubegebe1",
+      "id": "267083380",
+      "name": "Padang Galir",
       "isVerified": false,
       "isBlueVerified": false,
-      "profilePicture": "https://pbs.twimg.com/profile_images/2094768220964364288/1C_6F4ru_normal.jpg",
+      "profilePicture": "https://pbs.twimg.com/profile_images/787644286015721472/OXN-7QV6_normal.jpg",
       "coverPicture": "",
-      "description": "@TXT_members",
-      "location": "",
-      "followers": 57342,
-      "following": 55,
+      "description": "Seorang Padang yang Galir. Urang Bagak Gilo Baladiang. Mendalami perdukunan, pernah mampu mengubah channel TV dgn kedipan mata.\nranah.id",
+      "location": "Indonesia",
+      "followers": 23615,
+      "following": 1298,
       "status": "",
       "canDm": false,
       "canMediaTag": false,
@@ -318,13 +479,13 @@
       "hasCustomTimelines": true,
       "isTranslator": false,
       "mediaCount": 0,
-      "statusesCount": 55140,
+      "statusesCount": 162047,
       "withheldInCountries": [],
       "affiliatesHighlightedLabel": {},
       "possiblySensitive": false,
       "pinnedTweetIds": [],
       "profile_bio": {
-        "description": "@TXT_members",
+        "description": "Seorang Padang yang Galir. Urang Bagak Gilo Baladiang. Mendalami perdukunan, pernah mampu mengubah channel TV dgn kedipan mata.\nranah.id",
         "entities": {
           "description": {
             "user_mentions": []
@@ -338,13 +499,7 @@
     "extendedEntities": {},
     "card": {},
     "place": {},
-    "entities": {
-      "urls": [
-        {
-          "expanded_url": "https://x.com/ektjt5_/status/1447899418615685121/video/1"
-        }
-      ]
-    },
+    "entities": {},
     "isRetweet": false,
     "isQuote": false,
     "media": [],
@@ -352,349 +507,40 @@
   },
   {
     "type": "tweet",
-    "id": "2039297824983232656",
-    "url": "https://x.com/aimourna/status/2039297824983232656",
-    "twitterUrl": "https://twitter.com/aimourna/status/2039297824983232656",
-    "text": "jadi agenda date kita hari ini adalah boneka date 💋. me with bunny binnie 🐇dan kk awon cantik with teddy bear besar 🧸. \n\n#ALLYZSELCADAY #앨리즈 #AZSD #알파드라이브원 #ALPHADRIVEONE #이상원 #SANGWON https://t.co/npr1r8vTlU",
+    "id": "2124705316864770199",
+    "url": "https://x.com/MichelAdam1515/status/2124705316864770199",
+    "twitterUrl": "https://twitter.com/MichelAdam1515/status/2124705316864770199",
+    "text": "\"Tujuan penyadapan ini ingin menumbangkan Prabowo supaya Gibran jadi presiden.\n#EndUserPenyadapanJokowi \n\nASN pernah disodorkan Listyo untuk jadi ajudan Prabowo tapi ditolak Prabowo.\n\nLSP pernah bilang Prabowo cuma 2 tahun. Ternyata Gibran yang cuma 2 tahun\" (Ishlah Bahrawi) https://t.co/fQNIw7qG6m",
     "source": "",
-    "retweetCount": 3,
-    "replyCount": 5,
-    "likeCount": 10,
-    "quoteCount": 0,
-    "viewCount": "448",
-    "createdAt": "2026-04-01T11:04:24.000Z",
-    "lang": "in",
-    "bookmarkCount": 0,
-    "isReply": false,
-    "inReplyToId": null,
-    "conversationId": "2039297824983232656",
-    "inReplyToUserId": null,
-    "inReplyToUsername": null,
-    "isPinned": false,
-    "author": {
-      "type": "user",
-      "userName": "aimourna",
-      "url": "https://x.com/aimourna",
-      "twitterUrl": "https://twitter.com/aimourna",
-      "id": "1436553757580398592",
-      "name": "ʚ 𝅄 ֹ nαnααAααAααα ࣪˖⁩ 🐰 ⊹ ୨୧!:",
-      "isVerified": false,
-      "isBlueVerified": false,
-      "profilePicture": "https://pbs.twimg.com/profile_images/2063087751554342912/6-3qnJf8_normal.jpg",
-      "coverPicture": "",
-      "description": "🍰 ୨୧ biUu .. biu! this is 𝓝αnα archive : fan account, mulfand but mostly kpop boy group ꒰ she/her ꒱ #sunwoo and #sangwon are my beloved and my joy 🧚🏻‍♀ ɞ ׄ⭒",
-      "location": "O8z enfj",
-      "followers": 1829,
-      "following": 2523,
-      "status": "",
-      "canDm": false,
-      "canMediaTag": false,
-      "createdAt": "",
-      "entities": {
-        "description": {
-          "urls": []
-        },
-        "url": {}
-      },
-      "fastFollowersCount": 0,
-      "favouritesCount": 0,
-      "hasCustomTimelines": true,
-      "isTranslator": false,
-      "mediaCount": 0,
-      "statusesCount": 14550,
-      "withheldInCountries": [],
-      "affiliatesHighlightedLabel": {},
-      "possiblySensitive": false,
-      "pinnedTweetIds": [],
-      "profile_bio": {
-        "description": "🍰 ୨୧ biUu .. biu! this is 𝓝αnα archive : fan account, mulfand but mostly kpop boy group ꒰ she/her ꒱ #sunwoo and #sangwon are my beloved and my joy 🧚🏻‍♀ ɞ ׄ⭒",
-        "entities": {
-          "description": {
-            "user_mentions": []
-          },
-          "url": {
-            "urls": []
-          }
-        }
-      }
-    },
-    "extendedEntities": {},
-    "card": {},
-    "place": {},
-    "entities": {
-      "media": [
-        {
-          "expanded_url": "https://x.com/aimourna/status/2039297824983232656/photo/1"
-        }
-      ]
-    },
-    "isRetweet": false,
-    "isQuote": false,
-    "media": [
-      {
-        "expanded_url": "https://x.com/aimourna/status/2039297824983232656/photo/1",
-        "ext_media_availability": {
-          "status": "Available"
-        },
-        "ext_playlists": [],
-        "features": {},
-        "id_str": "2039297818423427072",
-        "indices": [
-          185,
-          208
-        ],
-        "media_url_https": "https://pbs.twimg.com/media/HE0Kj6pbgAAro5G.jpg",
-        "original_info": {
-          "height": 1308,
-          "width": 736
-        },
-        "type": "photo"
-      }
-    ],
-    "isConversationControlled": false
-  },
-  {
-    "type": "tweet",
-    "id": "1226446932932882433",
-    "url": "https://x.com/redvelfess/status/1226446932932882433",
-    "twitterUrl": "https://twitter.com/redvelfess/status/1226446932932882433",
-    "text": "[RVF] Baby bun/Bunny kan kelinci\nGomdori bahasa korea dari teddy bear\nWani : Nickname nya wendy nggasih?\nAri / byeongAri bahasa korea dari anak ayam\nKim petit : Nickname nya yeri, yg anak rv pernah nyanyiin 'petit petit kim yerim'\nKarakter nya emang anak RV banget dong ❤️ https://t.co/56TYnK3Ldc",
-    "source": "",
-    "retweetCount": 69,
-    "replyCount": 12,
-    "likeCount": 236,
-    "quoteCount": 3,
-    "viewCount": null,
-    "createdAt": "2020-02-09T10:05:09.000Z",
-    "lang": "in",
-    "bookmarkCount": 5,
-    "isReply": false,
-    "inReplyToId": null,
-    "conversationId": "1226446932932882433",
-    "inReplyToUserId": null,
-    "inReplyToUsername": null,
-    "isPinned": false,
-    "author": {
-      "type": "user",
-      "userName": "redvelfess",
-      "url": "https://x.com/redvelfess",
-      "twitterUrl": "https://twitter.com/redvelfess",
-      "id": "975594740891631616",
-      "name": "RVF OFF",
-      "isVerified": false,
-      "isBlueVerified": false,
-      "profilePicture": "https://pbs.twimg.com/profile_images/1744122384314163200/3CudgRN4_normal.jpg",
-      "coverPicture": "",
-      "description": "An manual-base dedicated to @RVsmtown & ReVeluv. Please read the rules before using the service! Report / PP: @rvfguards | kirim mfs ke DM🩷💛🩵💚💜",
-      "location": "RULES:",
-      "followers": 56640,
-      "following": 615,
-      "status": "",
-      "canDm": false,
-      "canMediaTag": false,
-      "createdAt": "",
-      "entities": {
-        "description": {
-          "urls": []
-        },
-        "url": {}
-      },
-      "fastFollowersCount": 0,
-      "favouritesCount": 0,
-      "hasCustomTimelines": true,
-      "isTranslator": false,
-      "mediaCount": 0,
-      "statusesCount": 181644,
-      "withheldInCountries": [],
-      "affiliatesHighlightedLabel": {},
-      "possiblySensitive": false,
-      "pinnedTweetIds": [],
-      "profile_bio": {
-        "description": "An manual-base dedicated to @RVsmtown & ReVeluv. Please read the rules before using the service! Report / PP: @rvfguards | kirim mfs ke DM🩷💛🩵💚💜",
-        "entities": {
-          "description": {
-            "user_mentions": []
-          },
-          "url": {
-            "urls": []
-          }
-        }
-      }
-    },
-    "extendedEntities": {},
-    "card": {},
-    "place": {},
-    "entities": {
-      "media": [
-        {
-          "expanded_url": "https://x.com/redvelfess/status/1226446932932882433/photo/1"
-        }
-      ]
-    },
-    "isRetweet": false,
-    "isQuote": false,
-    "media": [
-      {
-        "expanded_url": "https://x.com/redvelfess/status/1226446932932882433/photo/1",
-        "ext_media_availability": {
-          "status": "Available"
-        },
-        "ext_playlists": [],
-        "features": {},
-        "id_str": "1226446929816473601",
-        "indices": [
-          273,
-          296
-        ],
-        "media_url_https": "https://pbs.twimg.com/media/EQU2_BOUUAEkTP9.jpg",
-        "original_info": {
-          "height": 1564,
-          "width": 1564
-        },
-        "type": "photo"
-      }
-    ],
-    "isConversationControlled": false
-  },
-  {
-    "type": "tweet",
-    "id": "1266646992807055361",
-    "url": "https://x.com/bibithiii/status/1266646992807055361",
-    "twitterUrl": "https://twitter.com/bibithiii/status/1266646992807055361",
-    "text": "AAAAAAA ADA HUNNY BUNNY TEDDY BEAR NYA TUHHH CUBETTT❤❤❤❤❤❤❤ @kristtps https://t.co/DGG62vgzQ3",
-    "source": "",
-    "retweetCount": 28,
-    "replyCount": 3,
-    "likeCount": 49,
-    "quoteCount": 2,
-    "viewCount": null,
-    "createdAt": "2020-05-30T08:25:50.000Z",
-    "lang": "in",
-    "bookmarkCount": 1,
-    "isReply": false,
-    "inReplyToId": null,
-    "conversationId": "1266646992807055361",
-    "inReplyToUserId": null,
-    "inReplyToUsername": null,
-    "isPinned": false,
-    "author": {
-      "type": "user",
-      "userName": "bibithiii",
-      "url": "https://x.com/bibithiii",
-      "twitterUrl": "https://twitter.com/bibithiii",
-      "id": "1169212761680670721",
-      "name": "Cicia🌥💛KRIST MY BABY",
-      "isVerified": false,
-      "isBlueVerified": false,
-      "profilePicture": "https://pbs.twimg.com/profile_images/1508082813576560650/HgRmMscx_normal.jpg",
-      "coverPicture": "",
-      "description": "No one allowed to talk shits about Krist here #KristPerawat #ยูยู่ของคุณพี",
-      "location": "Krist's Pocket🤪",
-      "followers": 950,
-      "following": 632,
-      "status": "",
-      "canDm": false,
-      "canMediaTag": false,
-      "createdAt": "",
-      "entities": {
-        "description": {
-          "urls": []
-        },
-        "url": {}
-      },
-      "fastFollowersCount": 0,
-      "favouritesCount": 0,
-      "hasCustomTimelines": true,
-      "isTranslator": false,
-      "mediaCount": 0,
-      "statusesCount": 91947,
-      "withheldInCountries": [],
-      "affiliatesHighlightedLabel": {},
-      "possiblySensitive": false,
-      "pinnedTweetIds": [],
-      "profile_bio": {
-        "description": "No one allowed to talk shits about Krist here #KristPerawat #ยูยู่ของคุณพี",
-        "entities": {
-          "description": {
-            "user_mentions": []
-          },
-          "url": {
-            "urls": []
-          }
-        }
-      }
-    },
-    "extendedEntities": {},
-    "card": {},
-    "place": {},
-    "entities": {
-      "media": [
-        {
-          "expanded_url": "https://x.com/bibithiii/status/1266646992807055361/photo/1"
-        }
-      ]
-    },
-    "isRetweet": false,
-    "isQuote": false,
-    "media": [
-      {
-        "expanded_url": "https://x.com/bibithiii/status/1266646992807055361/photo/1",
-        "ext_media_availability": {
-          "status": "Available"
-        },
-        "ext_playlists": [],
-        "features": {},
-        "id_str": "1266646980811317249",
-        "indices": [
-          70,
-          93
-        ],
-        "media_url_https": "https://pbs.twimg.com/media/EZQIt9MUYAEJqrx.jpg",
-        "original_info": {
-          "height": 755,
-          "width": 1024
-        },
-        "type": "photo"
-      }
-    ],
-    "isConversationControlled": false
-  },
-  {
-    "type": "tweet",
-    "id": "1416634435999469570",
-    "url": "https://x.com/LIUofmylife/status/1416634435999469570",
-    "twitterUrl": "https://twitter.com/LIUofmylife/status/1416634435999469570",
-    "text": "Penat i tengok anak i makan dikelilingi adik2 dia (bunny, teddy bear dan plush toys yang lain). Tiap2 hari routine yang sama. Dia suap adik2 dia dulu baru dia suap diri sendiri. Bayangkan berapa pusingan kalau 1 pinggan penuh 🥴 https://t.co/EhkoMRVI9Y",
-    "source": "",
-    "retweetCount": 0,
+    "retweetCount": 11,
     "replyCount": 1,
-    "likeCount": 4,
+    "likeCount": 17,
     "quoteCount": 0,
-    "viewCount": null,
-    "createdAt": "2021-07-18T05:42:23.000Z",
+    "viewCount": "446",
+    "createdAt": "2026-11-23T03:23:17.000Z",
     "lang": "in",
-    "bookmarkCount": 0,
+    "bookmarkCount": 2,
     "isReply": false,
     "inReplyToId": null,
-    "conversationId": "1416634435999469570",
+    "conversationId": "2124705316864770199",
     "inReplyToUserId": null,
     "inReplyToUsername": null,
     "isPinned": false,
     "author": {
       "type": "user",
-      "userName": "LIUofmylife",
-      "url": "https://x.com/LIUofmylife",
-      "twitterUrl": "https://twitter.com/LIUofmylife",
-      "id": "344605880",
-      "name": "妮可",
+      "userName": "MichelAdam1515",
+      "url": "https://x.com/MichelAdam1515",
+      "twitterUrl": "https://twitter.com/MichelAdam1515",
+      "id": "1945366720954425344",
+      "name": "Michel Adam1515",
       "isVerified": false,
       "isBlueVerified": false,
-      "profilePicture": "https://pbs.twimg.com/profile_images/1960805460493393922/j0SEThQl_normal.jpg",
+      "profilePicture": "https://pbs.twimg.com/profile_images/1945367922324418560/45UIBecN_normal.jpg",
       "coverPicture": "",
-      "description": "10% random tweets, 10% Kpop, 10% Chen ZheYuan, 20% EXO, 50% Liu Yuning 🩷",
-      "location": "Seremban, Negeri Sembilan",
-      "followers": 791,
-      "following": 1117,
+      "description": "Baru lahir tanggal 16/7/2025",
+      "location": "",
+      "followers": 6623,
+      "following": 1731,
       "status": "",
       "canDm": false,
       "canMediaTag": false,
@@ -710,13 +556,13 @@
       "hasCustomTimelines": true,
       "isTranslator": false,
       "mediaCount": 0,
-      "statusesCount": 55613,
+      "statusesCount": 4453,
       "withheldInCountries": [],
       "affiliatesHighlightedLabel": {},
       "possiblySensitive": false,
       "pinnedTweetIds": [],
       "profile_bio": {
-        "description": "10% random tweets, 10% Kpop, 10% Chen ZheYuan, 20% EXO, 50% Liu Yuning 🩷",
+        "description": "Baru lahir tanggal 16/7/2025",
         "entities": {
           "description": {
             "user_mentions": []
@@ -733,7 +579,7 @@
     "entities": {
       "media": [
         {
-          "expanded_url": "https://x.com/Little_Wing93/status/1416634435999469570/photo/1"
+          "expanded_url": "https://x.com/MichelAdam1515/status/2124705316864770199/video/1"
         }
       ]
     },
@@ -741,29 +587,39 @@
     "isQuote": false,
     "media": [
       {
-        "expanded_url": "https://x.com/Little_Wing93/status/1416634435999469570/photo/1",
-        "ext_alt_text": "Waiting Skeleton GIF",
+        "additional_media_info": {
+          "monetizable": false
+        },
+        "allow_download_status": {
+          "allow_download": true
+        },
+        "expanded_url": "https://x.com/MichelAdam1515/status/2124705316864770199/video/1",
         "ext_media_availability": {
           "status": "Available"
         },
         "ext_playlists": [],
-        "id_str": "1416634427782754308",
+        "id_str": "2124705245951590400",
         "indices": [
-          228,
-          251
+          276,
+          299
         ],
-        "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/E6jlgaSUcAQl85S.jpg",
+        "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2124705245951590400/img/AB47xwswI0RQiDfO.jpg",
         "original_info": {
-          "height": 488,
-          "width": 490
+          "height": 568,
+          "width": 320
         },
-        "type": "animated_gif",
+        "type": "video",
         "video_info": {
+          "duration_millis": 126084,
           "variants": [
             {
-              "bitrate": 0,
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/amplify_video/2124705245951590400/pl/BTVDC-1A2hOLsNAK.m3u8?tag=29"
+            },
+            {
+              "bitrate": 632000,
               "content_type": "video/mp4",
-              "url": "https://video.twimg.com/tweet_video/E6jlgaSUcAQl85S.mp4"
+              "url": "https://video.twimg.com/amplify_video/2124705245951590400/vid/avc1/320x568/EFvOX1X02iuTyAxi.mp4?tag=29"
             }
           ]
         }
@@ -773,40 +629,40 @@
   },
   {
     "type": "tweet",
-    "id": "1730676468898771186",
-    "url": "https://x.com/parkyeppi/status/1730676468898771186",
-    "twitterUrl": "https://twitter.com/parkyeppi/status/1730676468898771186",
-    "text": "favorite pc you own? — pink bunny woongki or teddy bear myungjae!! https://t.co/55qOkN2vlp https://t.co/oC75nlgmTf",
+    "id": "2124688474452160786",
+    "url": "https://x.com/Anwar55768883/status/2124688474452160786",
+    "twitterUrl": "https://twitter.com/Anwar55768883/status/2124688474452160786",
+    "text": "2 tahun sudah Bapak Prabowo Subianto memimpin Indonesia. Terima kasih atas pengabdian dan kerja kerasnya untuk negeri. 🇮🇩\nMenurut kamu, program apa yang paling terasa manfaatnya? Tulis di reply \n.\n#TerimaKasihPrabowo #2TahunPrabowo https://t.co/p7geFhYUE5",
     "source": "",
-    "retweetCount": 1,
-    "replyCount": 2,
-    "likeCount": 14,
+    "retweetCount": 0,
+    "replyCount": 0,
+    "likeCount": 0,
     "quoteCount": 0,
-    "viewCount": "452",
-    "createdAt": "2023-12-01T19:53:19.000Z",
+    "viewCount": "1",
+    "createdAt": "2026-11-23T02:16:21.000Z",
     "lang": "in",
     "bookmarkCount": 0,
     "isReply": false,
     "inReplyToId": null,
-    "conversationId": "1730676468898771186",
+    "conversationId": "2124688474452160786",
     "inReplyToUserId": null,
     "inReplyToUsername": null,
     "isPinned": false,
     "author": {
       "type": "user",
-      "userName": "parkyeppi",
-      "url": "https://x.com/parkyeppi",
-      "twitterUrl": "https://twitter.com/parkyeppi",
-      "id": "1635823686421757953",
-      "name": "☆ janie misses bnd",
+      "userName": "Anwar55768883",
+      "url": "https://x.com/Anwar55768883",
+      "twitterUrl": "https://twitter.com/Anwar55768883",
+      "id": "588424962",
+      "name": "Anwar",
       "isVerified": false,
-      "isBlueVerified": true,
-      "profilePicture": "https://pbs.twimg.com/profile_images/2120765074952388608/DEFcHs3D_normal.jpg",
+      "isBlueVerified": false,
+      "profilePicture": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
       "coverPicture": "",
-      "description": "bnd, loona, kiiikiii ult",
-      "location": "‘01, any prns ★ 6012",
-      "followers": 3631,
-      "following": 716,
+      "description": "",
+      "location": "",
+      "followers": 0,
+      "following": 0,
       "status": "",
       "canDm": false,
       "canMediaTag": false,
@@ -822,13 +678,13 @@
       "hasCustomTimelines": true,
       "isTranslator": false,
       "mediaCount": 0,
-      "statusesCount": 63290,
+      "statusesCount": 127,
       "withheldInCountries": [],
       "affiliatesHighlightedLabel": {},
       "possiblySensitive": false,
       "pinnedTweetIds": [],
       "profile_bio": {
-        "description": "bnd, loona, kiiikiii ult",
+        "description": "",
         "entities": {
           "description": {
             "user_mentions": []
@@ -845,15 +701,7 @@
     "entities": {
       "media": [
         {
-          "expanded_url": "https://x.com/yvesily/status/1730676468898771186/photo/1"
-        },
-        {
-          "expanded_url": "https://x.com/yvesily/status/1730676468898771186/photo/2"
-        }
-      ],
-      "urls": [
-        {
-          "expanded_url": "https://retrospring.net/@yvesily/a/111506908020689989"
+          "expanded_url": "https://x.com/Anwar55768883/status/2124688474452160786/video/1"
         }
       ]
     },
@@ -861,213 +709,340 @@
     "isQuote": false,
     "media": [
       {
-        "expanded_url": "https://x.com/yvesily/status/1730676468898771186/photo/1",
+        "additional_media_info": {
+          "monetizable": false
+        },
+        "expanded_url": "https://x.com/Anwar55768883/status/2124688474452160786/video/1",
         "ext_media_availability": {
           "status": "Available"
         },
         "ext_playlists": [],
-        "features": {},
-        "id_str": "1730676464058593281",
+        "id_str": "2124688453744873472",
         "indices": [
-          91,
-          114
+          232,
+          255
         ],
-        "media_url_https": "https://pbs.twimg.com/media/GASZExVXcAEvfwn.jpg",
+        "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2124688453744873472/img/Eu3rU_e4YQG9vaeS.jpg",
         "original_info": {
-          "height": 1376,
-          "width": 1079
+          "height": 564,
+          "width": 320
         },
-        "type": "photo"
-      },
-      {
-        "expanded_url": "https://x.com/yvesily/status/1730676468898771186/photo/2",
-        "ext_media_availability": {
-          "status": "Available"
-        },
-        "ext_playlists": [],
-        "features": {},
-        "id_str": "1730676464062722048",
-        "indices": [
-          91,
-          114
-        ],
-        "media_url_https": "https://pbs.twimg.com/media/GASZExWWcAAZnLH.jpg",
-        "original_info": {
-          "height": 1365,
-          "width": 1034
-        },
-        "type": "photo"
+        "type": "video",
+        "video_info": {
+          "duration_millis": 60162,
+          "variants": [
+            {
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/amplify_video/2124688453744873472/pl/ugG6Lkw9OHPz9Qt6.m3u8?tag=14"
+            },
+            {
+              "bitrate": 632000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/2124688453744873472/vid/avc1/320x564/_hPZltcXWv-s1UyC.mp4?tag=14"
+            }
+          ]
+        }
       }
     ],
     "isConversationControlled": false
   },
   {
     "type": "tweet",
-    "id": "1801886740610974002",
-    "url": "https://x.com/kevinyakult/status/1801886740610974002",
-    "twitterUrl": "https://twitter.com/kevinyakult/status/1801886740610974002",
-    "text": "today’s mail💌\n\ninilah dia hasil huru hara panbuy pc BRANDING hahah welcome home kevin yakult (literally), carrot, teddy bear, bunny blanket, and korban nyemplung selanjutnya🤫\n\nthank you so much kak @mooneykebbie🥹🎀⭐️ https://t.co/d8FdBVshDv",
+    "id": "2122215969405775892",
+    "url": "https://x.com/taqibalqibul/status/2122215969405775892",
+    "twitterUrl": "https://twitter.com/taqibalqibul/status/2122215969405775892",
+    "text": "Buat yg nanya apa aja pencapaian Prabowo-gibran selama 2 tahun, ini faktanya https://t.co/mtpVOHBOKy",
+    "source": "",
+    "retweetCount": 151,
+    "replyCount": 2,
+    "likeCount": 260,
+    "quoteCount": 0,
+    "viewCount": "3891",
+    "createdAt": "2026-11-16T06:31:30.000Z",
+    "lang": "in",
+    "bookmarkCount": 27,
+    "isReply": false,
+    "inReplyToId": null,
+    "conversationId": "2122215969405775892",
+    "inReplyToUserId": null,
+    "inReplyToUsername": null,
+    "isPinned": false,
+    "author": {
+      "type": "user",
+      "userName": "taqibalqibul",
+      "url": "https://x.com/taqibalqibul",
+      "twitterUrl": "https://twitter.com/taqibalqibul",
+      "id": "1084942119607783424",
+      "name": "ibuul",
+      "isVerified": false,
+      "isBlueVerified": true,
+      "profilePicture": "https://pbs.twimg.com/profile_images/2035041200823296000/YkM5GKCO_normal.jpg",
+      "coverPicture": "",
+      "description": "Sambat di twitter, sabar di real life.",
+      "location": "",
+      "followers": 103894,
+      "following": 4620,
+      "status": "",
+      "canDm": false,
+      "canMediaTag": false,
+      "createdAt": "",
+      "entities": {
+        "description": {
+          "urls": []
+        },
+        "url": {}
+      },
+      "fastFollowersCount": 0,
+      "favouritesCount": 0,
+      "hasCustomTimelines": true,
+      "isTranslator": false,
+      "mediaCount": 0,
+      "statusesCount": 666340,
+      "withheldInCountries": [],
+      "affiliatesHighlightedLabel": {},
+      "possiblySensitive": false,
+      "pinnedTweetIds": [],
+      "profile_bio": {
+        "description": "Sambat di twitter, sabar di real life.",
+        "entities": {
+          "description": {
+            "user_mentions": []
+          },
+          "url": {
+            "urls": []
+          }
+        }
+      }
+    },
+    "extendedEntities": {},
+    "card": {},
+    "place": {},
+    "entities": {
+      "media": [
+        {
+          "expanded_url": "https://x.com/taqibalqibul/status/2122215969405775892/video/1"
+        }
+      ]
+    },
+    "isRetweet": false,
+    "isQuote": false,
+    "media": [
+      {
+        "additional_media_info": {
+          "monetizable": false
+        },
+        "allow_download_status": {
+          "allow_download": true
+        },
+        "expanded_url": "https://x.com/taqibalqibul/status/2122215969405775892/video/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "ext_playlists": [],
+        "id_str": "2122215892851576832",
+        "indices": [
+          77,
+          100
+        ],
+        "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2122215892851576832/img/6dH3A_7MMOfVZ_QJ.jpg",
+        "original_info": {
+          "height": 1024,
+          "width": 576
+        },
+        "type": "video",
+        "video_info": {
+          "duration_millis": 35366,
+          "variants": [
+            {
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/amplify_video/2122215892851576832/pl/oAqJhSAWlysFU1mY.m3u8?tag=29"
+            },
+            {
+              "bitrate": 632000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/2122215892851576832/vid/avc1/320x568/113nnRVd0UyYiucT.mp4?tag=29"
+            },
+            {
+              "bitrate": 950000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/2122215892851576832/vid/avc1/480x852/UcnUtvkfojOXnvaP.mp4?tag=29"
+            },
+            {
+              "bitrate": 2176000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/2122215892851576832/vid/avc1/576x1024/eFaQg6_QtDKqYz3K.mp4?tag=29"
+            }
+          ]
+        }
+      }
+    ],
+    "isConversationControlled": false
+  },
+  {
+    "type": "tweet",
+    "id": "2099355114603774220",
+    "url": "https://x.com/didiek_murdock/status/2099355114603774220",
+    "twitterUrl": "https://twitter.com/didiek_murdock/status/2099355114603774220",
+    "text": "::\nSuara akar rumput buat Prabowo dan Gibran setelah 2 tahun menjabat.\nSemoga terdengar oleh mereka.\n\n#HentikanJabatanPrabowoGibran\n\nYg tua tingkahnya kek anak kecil yg anak kecil kosong dan Plenger.\n•• https://t.co/GOidxoEO9U",
+    "source": "",
+    "retweetCount": 16,
+    "replyCount": 2,
+    "likeCount": 38,
+    "quoteCount": 0,
+    "viewCount": "1146",
+    "createdAt": "2026-09-14T04:30:38.000Z",
+    "lang": "in",
+    "bookmarkCount": 2,
+    "isReply": false,
+    "inReplyToId": null,
+    "conversationId": "2099355114603774220",
+    "inReplyToUserId": null,
+    "inReplyToUsername": null,
+    "isPinned": false,
+    "author": {
+      "type": "user",
+      "userName": "didiek_murdock",
+      "url": "https://x.com/didiek_murdock",
+      "twitterUrl": "https://twitter.com/didiek_murdock",
+      "id": "1937212457342390272",
+      "name": "Didiek Murdoch 🇲🇨 🇵🇸🔻",
+      "isVerified": false,
+      "isBlueVerified": false,
+      "profilePicture": "https://pbs.twimg.com/profile_images/1988054230624821249/I2vLpal__normal.jpg",
+      "coverPicture": "",
+      "description": "#GakFollowPorno\n#GakFollowPejabatBejat\n#FreePalestine",
+      "location": "",
+      "followers": 7857,
+      "following": 3637,
+      "status": "",
+      "canDm": false,
+      "canMediaTag": false,
+      "createdAt": "",
+      "entities": {
+        "description": {
+          "urls": []
+        },
+        "url": {}
+      },
+      "fastFollowersCount": 0,
+      "favouritesCount": 0,
+      "hasCustomTimelines": true,
+      "isTranslator": false,
+      "mediaCount": 0,
+      "statusesCount": 15954,
+      "withheldInCountries": [],
+      "affiliatesHighlightedLabel": {},
+      "possiblySensitive": false,
+      "pinnedTweetIds": [],
+      "profile_bio": {
+        "description": "#GakFollowPorno\n#GakFollowPejabatBejat\n#FreePalestine",
+        "entities": {
+          "description": {
+            "user_mentions": []
+          },
+          "url": {
+            "urls": []
+          }
+        }
+      }
+    },
+    "extendedEntities": {},
+    "card": {},
+    "place": {},
+    "entities": {
+      "media": [
+        {
+          "expanded_url": "https://x.com/didiek_murdock/status/2099355114603774220/video/1"
+        }
+      ]
+    },
+    "isRetweet": false,
+    "isQuote": false,
+    "media": [
+      {
+        "additional_media_info": {
+          "monetizable": false
+        },
+        "expanded_url": "https://x.com/didiek_murdock/status/2099355114603774220/video/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "ext_playlists": [],
+        "id_str": "2099354683399913472",
+        "indices": [
+          203,
+          226
+        ],
+        "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2099354683399913472/img/KPZC2Gg1qSo7z36S.jpg",
+        "original_info": {
+          "height": 1024,
+          "width": 576
+        },
+        "type": "video",
+        "video_info": {
+          "duration_millis": 60580,
+          "variants": [
+            {
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/amplify_video/2099354683399913472/pl/Q-XwDh54CHNgp_-G.m3u8?tag=29"
+            },
+            {
+              "bitrate": 632000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/2099354683399913472/vid/avc1/320x568/0iViwHtwamFBM4hY.mp4?tag=29"
+            },
+            {
+              "bitrate": 950000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/2099354683399913472/vid/avc1/480x852/l3w2jiu4ruhiHO7v.mp4?tag=29"
+            },
+            {
+              "bitrate": 2176000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/2099354683399913472/vid/avc1/576x1024/XrBXRj2-AGw7RuLD.mp4?tag=29"
+            }
+          ]
+        }
+      }
+    ],
+    "isConversationControlled": false
+  },
+  {
+    "type": "tweet",
+    "id": "2115489928104857637",
+    "url": "https://x.com/AnisaRisma21/status/2115489928104857637",
+    "twitterUrl": "https://twitter.com/AnisaRisma21/status/2115489928104857637",
+    "text": "prabowo gibran 2 periode? duhh 2 tahun menjabat aja udh awur-awuran enihhh negara gmn mau 2 periode\n\n#sadarkanprabowo",
     "source": "",
     "retweetCount": 1,
     "replyCount": 0,
-    "likeCount": 3,
-    "quoteCount": 1,
-    "viewCount": "278",
-    "createdAt": "2024-06-15T07:57:31.000Z",
-    "lang": "in",
-    "bookmarkCount": 0,
-    "isReply": false,
-    "inReplyToId": null,
-    "conversationId": "1801886740610974002",
-    "inReplyToUserId": null,
-    "inReplyToUsername": null,
-    "isPinned": false,
-    "author": {
-      "type": "user",
-      "userName": "kevinyakult",
-      "url": "https://x.com/kevinyakult",
-      "twitterUrl": "https://twitter.com/kevinyakult",
-      "id": "1671160191822487553",
-      "name": "dyva🧚🏼‍♀️",
-      "isVerified": false,
-      "isBlueVerified": false,
-      "profilePicture": "https://pbs.twimg.com/profile_images/1909987453387304960/fPsKGVzo_normal.jpg",
-      "coverPicture": "",
-      "description": "#더보이즈 #케빈 ‘s forever fairy🧚🏻‍♀️",
-      "location": "rps. she/her | 23",
-      "followers": 126,
-      "following": 145,
-      "status": "",
-      "canDm": false,
-      "canMediaTag": false,
-      "createdAt": "",
-      "entities": {
-        "description": {
-          "urls": []
-        },
-        "url": {}
-      },
-      "fastFollowersCount": 0,
-      "favouritesCount": 0,
-      "hasCustomTimelines": true,
-      "isTranslator": false,
-      "mediaCount": 0,
-      "statusesCount": 6110,
-      "withheldInCountries": [],
-      "affiliatesHighlightedLabel": {},
-      "possiblySensitive": false,
-      "pinnedTweetIds": [],
-      "profile_bio": {
-        "description": "#더보이즈 #케빈 ‘s forever fairy🧚🏻‍♀️",
-        "entities": {
-          "description": {
-            "user_mentions": []
-          },
-          "url": {
-            "urls": []
-          }
-        }
-      }
-    },
-    "extendedEntities": {},
-    "card": {},
-    "place": {},
-    "entities": {
-      "media": [
-        {
-          "expanded_url": "https://x.com/kevinyakult/status/1801886740610974002/photo/1"
-        },
-        {
-          "expanded_url": "https://x.com/kevinyakult/status/1801886740610974002/photo/2"
-        }
-      ]
-    },
-    "isRetweet": false,
-    "isQuote": false,
-    "media": [
-      {
-        "allow_download_status": {
-          "allow_download": true
-        },
-        "expanded_url": "https://x.com/kevinyakult/status/1801886740610974002/photo/1",
-        "ext_media_availability": {
-          "status": "Available"
-        },
-        "ext_playlists": [],
-        "features": {},
-        "id_str": "1801886730456649728",
-        "indices": [
-          216,
-          239
-        ],
-        "media_url_https": "https://pbs.twimg.com/media/GQGWbz5b0AAkkGa.jpg",
-        "original_info": {
-          "height": 2080,
-          "width": 1170
-        },
-        "type": "photo"
-      },
-      {
-        "allow_download_status": {
-          "allow_download": true
-        },
-        "expanded_url": "https://x.com/kevinyakult/status/1801886740610974002/photo/2",
-        "ext_media_availability": {
-          "status": "Available"
-        },
-        "ext_playlists": [],
-        "features": {},
-        "id_str": "1801886730460794882",
-        "indices": [
-          216,
-          239
-        ],
-        "media_url_https": "https://pbs.twimg.com/media/GQGWbz6bEAIKCE1.jpg",
-        "original_info": {
-          "height": 2080,
-          "width": 1170
-        },
-        "type": "photo"
-      }
-    ],
-    "isConversationControlled": false
-  },
-  {
-    "type": "tweet",
-    "id": "710805617007529984",
-    "url": "https://x.com/designoks/status/710805617007529984",
-    "twitterUrl": "https://twitter.com/designoks/status/710805617007529984",
-    "text": "soo - pinguin\nkai - teddy bear\njm - bunny\njd - dino\nb - flying squirrel\nxing - unicorn\ncy - tiger?\nsehun - shark? \nmiseok - ??",
-    "source": "",
-    "retweetCount": 6,
-    "replyCount": 2,
-    "likeCount": 4,
+    "likeCount": 2,
     "quoteCount": 0,
-    "viewCount": null,
-    "createdAt": "2016-03-18T12:30:39.000Z",
+    "viewCount": "165",
+    "createdAt": "2026-10-28T17:04:37.000Z",
     "lang": "in",
     "bookmarkCount": 0,
     "isReply": false,
     "inReplyToId": null,
-    "conversationId": "710805617007529984",
+    "conversationId": "2115489928104857637",
     "inReplyToUserId": null,
     "inReplyToUsername": null,
     "isPinned": false,
     "author": {
       "type": "user",
-      "userName": "designoks",
-      "url": "https://x.com/designoks",
-      "twitterUrl": "https://twitter.com/designoks",
-      "id": "1475478972",
-      "name": "ᴼᵏˢ(⌐‿⌐)",
+      "userName": "AnisaRisma21",
+      "url": "https://x.com/AnisaRisma21",
+      "twitterUrl": "https://twitter.com/AnisaRisma21",
+      "id": "1270411032154918914",
+      "name": "ARA",
       "isVerified": false,
       "isBlueVerified": false,
-      "profilePicture": "https://pbs.twimg.com/profile_images/1148849092610732032/ObJFr3qN_normal.jpg",
+      "profilePicture": "https://pbs.twimg.com/profile_images/1475144088823291905/tr4zkgq8_normal.jpg",
       "coverPicture": "",
-      "description": "#Baekhyun stan since 2012🎤💛 Impulsive • lots of unpopular opinions • rated on occasion 🔞",
+      "description": "Kejar Impian Yang sempat gagal🌻",
       "location": "",
-      "followers": 2763,
-      "following": 238,
+      "followers": 21,
+      "following": 41,
       "status": "",
       "canDm": false,
       "canMediaTag": false,
@@ -1083,13 +1058,13 @@
       "hasCustomTimelines": true,
       "isTranslator": false,
       "mediaCount": 0,
-      "statusesCount": 197016,
+      "statusesCount": 147,
       "withheldInCountries": [],
       "affiliatesHighlightedLabel": {},
       "possiblySensitive": false,
       "pinnedTweetIds": [],
       "profile_bio": {
-        "description": "#Baekhyun stan since 2012🎤💛 Impulsive • lots of unpopular opinions • rated on occasion 🔞",
+        "description": "Kejar Impian Yang sempat gagal🌻",
         "entities": {
           "description": {
             "user_mentions": []

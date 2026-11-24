@@ -84,7 +84,13 @@ export function collectTweetsFromSearchTimelineResponse(
     collectedTweets: Map<string, any>,
 ): void {
     for (const response of fullJsonResponse) {
-        const instructions = response.data?.search_by_raw_query?.search_timeline?.timeline?.instructions || [];
+        // Dua bentuk respons: SearchByRawQuery memakai search_by_raw_query,
+        // SearchTimeline memakai search_timeline. Versi sebelumnya hanya membaca
+        // yang pertama, sehingga fallback SearchTimeline selalu menghasilkan 0 tweet.
+        const instructions =
+            response.data?.search_by_raw_query?.search_timeline?.timeline?.instructions ??
+            response.data?.search_timeline?.timeline?.instructions ??
+            [];
 
         for (const instruction of instructions) {
             const instructionType = instruction.__typename || instruction.type;

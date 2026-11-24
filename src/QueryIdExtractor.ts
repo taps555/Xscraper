@@ -1,77 +1,112 @@
-import got from 'got';
-import { AuthService } from './services/auth.js';
 import fs from 'fs';
 import { ResponseSearchQuery } from './interfaces/Response.js';
-import { error } from 'console';
 
-interface SearchOptions {
-    searchTerm: string;
-    limit: number;
-    queryId: string;
-    cookieHeader: string;
-    ct0: string;
+export interface SearchRequest {
+    url: string;
+    method: string;
+    headers: Record<string, string>;
+    body?: string | null;
 }
 
-const bearerTokenPublic = process.env.bearerTokenPublic;
+interface SearchOptions {
+    limit: number;
+    request: SearchRequest;
+    fetchFn: (req: SearchRequest) => Promise<{ status: number; body: any }>;
+    /** Jeda antar halaman (halaman pertama tidak ditunda). Default 400ms. */
+    pageDelayMs?: number;
+}
 
-export async function fetchSearch({ searchTerm, limit, queryId, cookieHeader, ct0 }: SearchOptions) {
-    if (!cookieHeader) throw new Error('cookie tidak tersimpan');
-    if (!ct0) throw new Error('token ct0 tidak ada');
-    const bearerToken = process.env.BEARER_TOKEN || bearerTokenPublic;
+function safeParseJson(value: string | null | undefined): any {
+    if (!value) return null;
+    try {
+        return JSON.parse(value);
+    } catch {
+        return null;
+    }
+}
 
-    const client = got.extend({
-        headers: {
-            authorization: `Bearer ${bearerToken}`,
-            cookie: cookieHeader,
-            'x-csrf-token': ct0,
-            'x-twitter-auth-type': 'OAuth2Session',
-            'x-twitter-active-user': 'yes',
-            'x-twitter-client-language': 'en',
-            'user-agent':
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
-        },
-        responseType: 'json',
-    });
+/**
+ * X mengirim GraphQL dalam 2 bentuk:
+ *  - GET  : variables ada di query string (?variables={"..."})
+ *  - POST : variables ada di body JSON ({"variables":{...},"features":{...},"queryId":"..."})
+ * Cursor harus disuntik ke tempat yang benar, kalau tidak request berikutnya invalid (404).
+ */
+function withCursor(base: SearchRequest, cursor: string | null): SearchRequest {
+    if (!cursor) return base;
+
+    if ((base.method || 'GET').toUpperCase() === 'GET') {
+        const u = new URL(base.url);
+        const variables = safeParseJson(u.searchParams.get('variables')) ?? {};
+        variables.cursor = cursor;
+        u.searchParams.set('variables', JSON.stringify(variables));
+        return { ...base, url: u.toString() };
+    }
+
+    const payload = safeParseJson(base.body) ?? {};
+    const parsedVariables = safeParseJson(payload.variables) ?? payload.variables ?? {};
+    payload.variables = { ...parsedVariables, cursor };
+    return { ...base, body: JSON.stringify(payload) };
+}
+
+export async function fetchSearch({ limit, request, fetchFn, pageDelayMs = 400 }: SearchOptions) {
+    if (!request?.url) throw new Error('request URL tidak tersedia');
 
     const allResponses: any[] = [];
     let collectedCount = 0;
     let cursor: string | null = null;
+    let pageIndex = 0;
 
-    console.log(`Mulai scraping: "${searchTerm}" dengan limit ${limit}`);
+    console.log(`Mulai scraping dengan limit ${limit} (${request.method} ${request.url.split('?')[0]})`);
 
     while (collectedCount < limit) {
-        await new Promise((r) => setTimeout(r, 1500));
+        // Delay hanya ANTAR halaman. Dulu selalu menunggu 1500ms bahkan sebelum request
+        // pertama, padahal request pertama itu replay dari request yang barusan dikirim X.
+        if (pageIndex > 0 && pageDelayMs > 0) {
+            await new Promise((r) => setTimeout(r, pageDelayMs));
+        }
+        pageIndex++;
 
-        const variables = {
-            rawQuery: `${searchTerm} lang:in`,
-            product: 'Top', // ganti ke 'Latest' jika ingin tweet terbaru
-            querySource: 'typed_query',
-            count: 20,
-            cursor,
-            withMediaGridTweet: false,
-            __relay_internal__pv__xclientsfeaturesappviewerisloggedinrelayprovider: true,
-            __relay_internal__pv__xclientsfeaturestranslationgroktranslatedpostenabledrelayprovider: true,
-            __relay_internal__pv__replydownvoteenabledrelayprovider: false,
-            __relay_internal__pv__postctafetchenabledrelayprovider: false,
-            __relay_internal__pv__xclientsfeaturestweetcomponentsgrokanalyzepostrelayprovider: true,
-            __relay_internal__pv__xclientsfeaturestranslationnoteautotranslationenabledrelayprovider: true,
-            __relay_internal__pv__liveeventpostcontextenabledrelayprovider: true,
-            __relay_internal__pv__xclientsfeaturestweetsportspostcontextenabledrelayprovider: true,
-            __relay_internal__pv__timelineuserbioautotranslationrelayprovider: true,
-        };
+        // halaman berikutnya: sunting cursor sesuai bentuk request asli (GET/POST)
+        const currentRequest = withCursor(request, cursor);
 
         try {
-            const res: any = await client.get(`https://api.x.com/graphql/${queryId}/SearchByRawQuery`, {
-                searchParams: {
-                    variables: JSON.stringify(variables),
-                },
-            });
+            const res = await fetchFn(currentRequest);
+            // body mentah dari network: belum tentu JSON/objek yang valid
+            const raw: any = res.body;
 
-            const data: ResponseSearchQuery = res.body;
+            if (res.status !== 200 || !raw || typeof raw !== 'object') {
+                const preview = typeof raw === 'string' ? raw.slice(0, 300) : raw;
+                console.error(`Response tidak valid (status ${res.status}):`, preview || '(body kosong)');
+
+                // Diagnosa: 404 body kosong biasanya berarti path GraphQL tidak menerima
+                // operasi yang diminta (variables tidak terbaca / queryId tidak cocok).
+                try {
+                    const u = new URL(currentRequest.url);
+                    console.error(
+                        `  method=${currentRequest.method} ` +
+                            `variables=${u.searchParams.get('variables') ? 'ada' : 'TIDAK ADA'} ` +
+                            `features=${u.searchParams.get('features') ? 'ada' : 'TIDAK ADA'} ` +
+                            `body=${currentRequest.body ? `${currentRequest.body.length} byte` : 'kosong'}`,
+                    );
+                } catch {
+                    // best-effort
+                }
+                break;
+            }
+
+            const data = raw as ResponseSearchQuery;
+
             allResponses.push(data);
             fs.writeFileSync('debug_response.json', JSON.stringify(data, null, 2));
 
-            const instructions = data.data?.search_by_raw_query?.search_timeline?.timeline?.instructions || [];
+            // GraphQL error ada di level atas (data.errors), bukan di data.data
+            const topErrors = (data as any)?.errors;
+            if (topErrors) {
+                console.error('GraphQL errors:', JSON.stringify(topErrors).slice(0, 500));
+            }
+            const root: any = (data as any)?.data ?? {};
+            const timeline = root?.search_by_raw_query?.search_timeline?.timeline ?? root?.search_timeline?.timeline;
+            const instructions = timeline?.instructions || [];
 
             const addEntries = instructions.find((i: any) => (i.__typename || i.type) === 'TimelineAddEntries');
             const entries = addEntries?.entries || [];

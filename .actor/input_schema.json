@@ -1,25 +1,36 @@
 {
     "$schema": "https://apify.com/schemas/v1/input.ide.json",
-    "title": "PlaywrightCrawler Template",
+    "title": "X (Twitter) Scraper Input",
     "type": "object",
     "schemaVersion": 1,
     "properties": {
-        "startUrls": {
-            "title": "Start URLs",
-            "type": "array",
-            "description": "URLs to start with.",
-            "editor": "requestListSources",
-            "prefill": [
-                {
-                    "url": "https://apify.com"
-                }
-            ]
+        "searchTerm": {
+            "title": "Search Term",
+            "type": "string",
+            "description": "Keyword atau hashtag yang ingin dicari di X.",
+            "editor": "textfield"
         },
-        "maxRequestsPerCrawl": {
-            "title": "Max Requests per Crawl",
+        "maxItems": {
+            "title": "Max Items",
             "type": "integer",
-            "description": "Maximum number of requests that can be made by this crawler.",
-            "default": 100
+            "description": "Maksimal jumlah tweet yang ingin dikumpulkan.",
+            "default": 100,
+            "minimum": 1,
+            "editor": "number"
+        },
+        "cookieHeader": {
+            "title": "Cookie Header",
+            "type": "string",
+            "description": "Cadangan: string header cookies dari Cookie Editor, dipakai kalau file cookie JSON tidak tersedia",
+            "editor": "textarea",
+            "isSecret": true
+        },
+        "proxy": {
+            "title": "Proxy Configuration",
+            "type": "object",
+            "description": "Konfigurasi proxy untuk menghindari blokir.",
+            "editor": "proxy"
         }
-    }
+    },
+    "required": ["searchTerm"]
 }

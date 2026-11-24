@@ -3,41 +3,14 @@
     "name": "x-scraper",
     "title": "X (Twitter) Scraper",
     "description": "Scrapes tweets, comments, and sentiment analysis from X using Query IDs and Playwright.",
-    "version": "1.0.0",
+    "version": "1.0",
     "dockerfile": "../Dockerfile",
     "meta": {
+        "generatedBy": "Cline with Claude Sonnet 4.5",
         "maintainer": "Trio Adhi Pamungkas S",
         "keywords": ["twitter", "x", "social-media", "scraping", "sentiment-analysis"]
     },
-    "input": {
-        "type": "object",
-        "properties": {
-            "searchTerm": {
-                "type": "string",
-                "description": "Keyword atau hashtag yang ingin dicari di X.",
-                "editor": "textfield"
-            },
-            "maxItems": {
-                "type": "integer",
-                "description": "Maksimal jumlah tweet yang ingin dikumpulkan.",
-                "default": 100,
-                "minimum": 1
-            },
-            "proxy": {
-                "type": "object",
-                "description": "Konfigurasi proxy untuk menghindari blokir.",
-                "editor": "proxy"
-            },
-            "cookieHeader": {
-                "title": "Cookie Header",
-                "type": "string",
-                "description": "Cadangan: string header cookies dari Cookie Editor, dipakai kalau file cookie JSON tidak tersedia",
-                "editor": "textarea",
-                "isSecret": true
-            }
-        },
-        "required": ["searchTerm"]
-    },
+    "input": "./input_schema.json",
     "defaultRunOptions": {
         "memory": 2048,
         "timeout": 7200,
