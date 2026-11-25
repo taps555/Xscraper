@@ -8,6 +8,12 @@ dist
 node_modules
 apify_storage
 storage
+storage
+apify_storage
+debug_response.json
+hasilscraping_bunated.json
+.env
+hasilscraping*.json
 
 # Added by Apify CLI
 .venv

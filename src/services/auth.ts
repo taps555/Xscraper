@@ -56,7 +56,7 @@ export const AuthService = {
 
             console.log(`Load ${cookie.length} cookies dari store ${STORE_NAME}`);
             return {
-                cookies: cookie, // sudah format Playwright, tanpa normalizeCookies
+                cookies: cookie,
                 capturedAt: new Date().toISOString(),
             };
         } catch (error) {

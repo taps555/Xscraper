@@ -4,11 +4,13 @@
     "type": "object",
     "schemaVersion": 1,
     "properties": {
-        "searchTerm": {
-            "title": "Search Term",
-            "type": "string",
-            "description": "Keyword atau hashtag yang ingin dicari di X.",
-            "editor": "textfield"
+        "searchTerms": {
+            "title": "Search Terms",
+            "type": "array",
+            "description": "Satu atau lebih keyword/hashtag. Klik 'Add' untuk menambah baris.",
+            "editor": "stringList",
+            "items": { "type": "string" },
+            "minItems": 1
         },
         "maxItems": {
             "title": "Max Items",
@@ -33,5 +35,5 @@
             "editor": "proxy"
         }
     },
-    "required": ["searchTerm"]
+    "required": ["searchTerms"]
 }
