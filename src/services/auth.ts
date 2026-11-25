@@ -8,13 +8,6 @@ interface StoredSession {
 }
 const STORE_NAME = 'cookie-session';
 const KEY = 'x-main';
-
-/**
- * Nama env var untuk cookie header.
- * Diisi di Apify Console > Actor > Settings > Environment variables.
- * Ini cara paling aman: tidak ikut ter-commit, tidak ikut ke Docker image,
- * dan tidak perlu diketik ulang di form input setiap run.
- */
 const ENV_COOKIE_HEADER = 'X_COOKIE_HEADER';
 
 export function normalizeCookies(rawCookies: any[]): Cookie[] {
@@ -64,7 +57,7 @@ export const AuthService = {
 
             console.log(`Load ${cookie.length} cookies dari store ${STORE_NAME}`);
             return {
-                cookies: cookie, // sudah format Playwright, tanpa normalizeCookies
+                cookies: cookie,
                 capturedAt: new Date().toISOString(),
             };
         } catch (error) {
